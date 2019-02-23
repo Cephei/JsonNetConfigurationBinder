@@ -1,7 +1,7 @@
 # JsonNetConfigurationBinder
-Add support for Json.net during Microsoft.Extensions.Configuration binding.
+Add support for Json.net and JsonConverter during Microsoft.Extensions.Configuration binding. This is a proof-of-concept and not fully tested!
 
-## USAGE: 
+## Example Usage: 
 _I want to support Jace.net math expressions in my configuration._
 
 #### Program.cs

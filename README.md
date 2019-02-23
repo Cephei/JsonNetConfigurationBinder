@@ -82,9 +82,7 @@ public class CrawlerSettingsConverter : JsonConverter
             switch (obj.Name)
             {
                 case "hyperlink":
-                    settings =
-                        JsonConvert.DeserializeObject<HyperlinkCrawlerSettings>(
-                            obj.Value.ToString());
+                    settings = serializer.Deserialize(new JTokenReader(obj.Value), typeof(HyperlinkCrawlerSettings));
                     break;
                 default:
                     throw new Exception("invalid crawler type");

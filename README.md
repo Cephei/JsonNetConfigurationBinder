@@ -1,5 +1,7 @@
 # JsonNetConfigurationBinder
-Add support for Json.net and JsonConverter during Microsoft.Extensions.Configuration binding. This is a proof-of-concept and not fully tested!
+Add support for Json.net and JsonConverter during Microsoft.Extensions.Configuration binding. This is a proof-of-concept and not fully tested! The ability to support this hinges upon being able to accurately parse an IConfigurationSection into a JToken tree. See: https://github.com/Cephei/JsonNetConfigurationBinder/blob/dbf763a2095f507ace972cd2c8e653507552b4d9/JsonNetConfigurationBinder.cs#L136
+
+As a POC, I have not done any tests other than very it works in the sample below. The only known issue I am aware of is I didn't include support for detecting JArray as I didn't need it for the POC. You can read the comments in the file mentioned above about JObject/JArray detection. IConfigurationSection uses the same concrete type to represent an array, object, and key value pair.
 
 ## Example Usage: 
 _I want to support Jace.net math expressions in my configuration._

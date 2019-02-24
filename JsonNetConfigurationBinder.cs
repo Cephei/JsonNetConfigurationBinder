@@ -186,7 +186,6 @@ namespace Microsoft.Extensions.Configuration
             else
             {
                 builder.Add(new JProperty(section.Key, JToken.FromObject(section.Value)));
-                return builder;
             }
 
             return builder;
